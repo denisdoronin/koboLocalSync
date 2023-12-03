@@ -1,5 +1,5 @@
-﻿kobo:
-    path: e:\.kobo\
+kobo:
+    path: kobo\.kobo\
     databasefile: KoboReader.sqlite
     supportedformats: EPUB, EPUB3, FlePub, PDF, MOBI, JPEG, GIF, PNG, BMP, TIFF, TXT, HTML, RTF, CBZ, CBR
 local:

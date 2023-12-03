@@ -3,6 +3,7 @@ import os
 
 #read file with settings (kobo file system details, books location on local PC)
 def readSettings(settingsFile):
+    settings = {}
     with open(settingsFile, "r") as stream:
         try:
             settings = yaml.safe_load(stream)
