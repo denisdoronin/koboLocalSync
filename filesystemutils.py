@@ -1,24 +1,4 @@
-import yaml
 import os
-
-#read file with settings (kobo file system details, books location on local PC)
-def readSettings(settingsFile):
-    settings = {}
-    with open(settingsFile, "r") as stream:
-        try:
-            settings = yaml.safe_load(stream)
-        except yaml.YAMLError as exc:
-            print ("ERROR: Can't open settings file: ", exc)
-            exit()
-        finally:
-            stream.close()
-
-    print("Settings:") 
-    print("  Kobo database path: ", settings['kobo']['path'])
-    print("  Kobo database file: ", settings['kobo']['databasefile'])
-    print("  Local folder with books: ", settings['local']['shelfpath'])
-
-    return settings
 
 #get list of all folders under "shelfpath" excluding files
 #return list of folders
