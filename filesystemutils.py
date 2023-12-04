@@ -1,4 +1,5 @@
 import os
+import shutil
 
 #get list of all folders under "shelfpath" excluding files
 #return list of folders
@@ -16,7 +17,14 @@ def listFilesInFolders(folders, shelfpath):
     for folder in folders:
         print("Folder: ", folder)
         print("  Files: ", os.listdir(shelfpath+folder))
+    return
 
-    return    
+#create new folder on Kobo device. new Folder Name == new Collection Name
+def createFolder(collectionName, koboRootFolder):
+    os.makedirs(koboRootFolder+collectionName,mode=0o777,exist_ok=True)
+    return
 
-
+#copy file to Kobo device
+#def copyFile(collectionName, fileName, localFolder, koboRootFolder):
+#    shutil.copyfile(localFolder+collectionName+fileName, koboRootFolder+collectionName)
+#    return
