@@ -19,12 +19,22 @@ def listFilesInFolders(folders, shelfpath):
         print("  Files: ", os.listdir(shelfpath+folder))
     return
 
+def getBooksFromFolder(path, supportedFormats):
+    files = os.listdir(path)
+    for file in files:
+        name, extension = os.path.splitext(file)
+        if extension.replace(".","") in supportedFormats == False:
+            files.remove(file)
+    return files
+
+
 #create new folder on Kobo device. new Folder Name == new Collection Name
 def createFolder(collectionName, koboRootFolder):
     os.makedirs(koboRootFolder+collectionName,mode=0o777,exist_ok=True)
     return
 
 #copy file to Kobo device
-#def copyFile(collectionName, fileName, localFolder, koboRootFolder):
-#    shutil.copyfile(localFolder+collectionName+fileName, koboRootFolder+collectionName)
-#    return
+def copyFile(collectionName, fileName, localFolder, koboRootFolder):
+    #shutil.copyfile(localFolder+collectionName+fileName, koboRootFolder+collectionName)
+    shutil.copyfile("books\\06-May-2023\\Budzhold_Shalion_1_Proklyatie-Shaliona.191641.fb2.epub", "kobo\\06-May-2023\\Budzhold_Shalion_1_Proklyatie-Shaliona.191641.fb2.epub")
+    return
