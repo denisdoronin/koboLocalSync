@@ -1,3 +1,3 @@
 # koboLocalSync
-To copy local folders structure together with books from your to Kobo book reader. Collections will be created by folder names, and books place to these collections.
+To copy local folders structure together with books from your PC to Kobo book reader. Collections will be named same as folder names, and books placed to these collections.
 Nested folders are not supported.
