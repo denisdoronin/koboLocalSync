@@ -7,7 +7,7 @@ def main():
     settings = readSettings("settings.yaml")
     shelfPath = settings['local']['shelfpath']
     shelfPath = shelfPath if shelfPath[-1] == '\\' else shelfPath + '\\'
-    supportedFormats = settings['kobo']['supportedformats'].replace(" ", "").split(",")
+    supportedFormats = settings['kobo']['supportedformats'].replace(" ", "").upper().split(",")
 
     # 2. read local folders
     folders = readLocalShelfFolders(shelfPath)

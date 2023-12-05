@@ -19,13 +19,15 @@ def listFilesInFolders(folders, shelfpath):
         print("  Files: ", os.listdir(shelfpath+folder))
     return
 
+#get list of files in supported formats from folder
 def getBooksFromFolder(path, supportedFormats):
     files = os.listdir(path)
+    books = []
     for file in files:
         name, extension = os.path.splitext(file)
-        if extension.replace(".","") in supportedFormats == False:
-            files.remove(file)
-    return files
+        if extension.replace(".","").upper() in supportedFormats:
+            books.append(file)
+    return books
 
 
 #create new folder on Kobo device. new Folder Name == new Collection Name
