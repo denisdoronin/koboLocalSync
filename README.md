@@ -15,8 +15,14 @@ RUN: koboLocalSync.py
 SETTING.YAML:
 
 kobo: #kobo device settings
-    dbfile: .kobo\KoboReader.sqlite #path to kobo database file. Likely should say like this.     
-    rootfolder: #root folder of Kobo device. For windows based PC it should be something like e:\ 
+
+    dbfile: .kobo\KoboReader.sqlite #path to kobo database file. Likely should say like this.
+    
+    rootfolder: #root folder of Kobo device. For windows based PC it should be something like e:\
+    
     supportedformats: EPUB, EPUB3, FlePub, PDF, MOBI, JPEG, GIF, PNG, BMP, TIFF, TXT, HTML, RTF, CBZ, CBR, FB2
+    
 local: #local PC settings
+
     shelfpath: books\ #location of foldes with your books
+
