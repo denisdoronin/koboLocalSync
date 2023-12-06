@@ -39,5 +39,6 @@ def createFolder(collectionName, koboRootFolder):
 #copy file to Kobo device
 def copyFile(src, dst):
     print("Adding book file to Kobo: ", dst)
-    shutil.copyfile(src, dst)
+    if not os.path.exists(dst):
+        shutil.copyfile(src, dst)
     return

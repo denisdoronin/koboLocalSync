@@ -27,9 +27,9 @@ def main():
             KoboCreateCollection(koboDB, folder)
             # 7. Copy every supported file from local folder to on-device folder
             # 8. Assotiate every copied file with collection in DB
-            for book in books:
-                copyFile(shelfPath + folder + '\\' + book, koboRoot + folder + '\\' + book)
-                KoboAddBookToCollection(koboDB, folder, book)
+            for book in books:                
+                copyFile(shelfPath + folder + '\\' + book, koboRoot + folder + '\\' + book.replace("'",""))
+                KoboAddBookToCollection(koboDB, folder, book.replace("'",""))
     return
 
 main()

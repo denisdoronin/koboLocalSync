@@ -1,6 +1,6 @@
 kobo:
     dbfile: .kobo\KoboReader.sqlite
-    rootfolder: kobo\ 
+    rootfolder: e:\ 
     supportedformats: EPUB, EPUB3, FlePub, PDF, MOBI, JPEG, GIF, PNG, BMP, TIFF, TXT, HTML, RTF, CBZ, CBR, FB2
 local:
     shelfpath: books\
