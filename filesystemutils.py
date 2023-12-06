@@ -10,7 +10,7 @@ def readLocalShelfFolders(shelfpath):
         if os.path.isdir(absPath) == True: 
             folders.append(folder)
 
-    print("\nSubfolders under folder with books:\n  ", folders)
+    print("\nList of local folders under", shelfpath, ":\n    ", folders, "\n")
     return folders
 
 def listFilesInFolders(folders, shelfpath):
@@ -32,10 +32,12 @@ def getBooksFromFolder(path, supportedFormats):
 
 #create new folder on Kobo device. new Folder Name == new Collection Name
 def createFolder(collectionName, koboRootFolder):
+    print("Creating folder ", collectionName, " on Kobo.")
     os.makedirs(koboRootFolder+collectionName,mode=0o777,exist_ok=True)
     return
 
 #copy file to Kobo device
 def copyFile(src, dst):
+    print("Adding book file to Kobo: ", dst)
     shutil.copyfile(src, dst)
     return

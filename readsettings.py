@@ -13,9 +13,9 @@ def readSettings(settingsFile):
             stream.close()
 
     print("Settings:") 
-    print("  Kobo database path: ", settings['kobo']['dbfile'])
-    print("  Kobo root folder: ", settings['kobo']['rootfolder'])
-    print("  Kobo supported formats: ", settings['kobo']['supportedformats'])
-    print("  Local folder with books: ", settings['local']['shelfpath'])
+    print("    Kobo database path: ", settings['kobo']['dbfile'])
+    print("    Kobo root folder: ", settings['kobo']['rootfolder'])
+    print("    Kobo supported formats: ", settings['kobo']['supportedformats'])
+    print("    Local folder with books: ", settings['local']['shelfpath'])
 
     return settings
