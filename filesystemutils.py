@@ -36,7 +36,6 @@ def createFolder(collectionName, koboRootFolder):
     return
 
 #copy file to Kobo device
-def copyFile(collectionName, fileName, localFolder, koboRootFolder):
-    #shutil.copyfile(localFolder+collectionName+fileName, koboRootFolder+collectionName)
-    shutil.copyfile("books\\06-May-2023\\Budzhold_Shalion_1_Proklyatie-Shaliona.191641.fb2.epub", "kobo\\06-May-2023\\Budzhold_Shalion_1_Proklyatie-Shaliona.191641.fb2.epub")
+def copyFile(src, dst):
+    shutil.copyfile(src, dst)
     return
