@@ -1,12 +1,6 @@
-#kobo device settings
 kobo:
-    #fill path to kobo database file. File name is always KoboReader.sqlite 
     dbfile: .kobo\KoboReader.sqlite
-    #root folder of Kobo readed device. For windows based PC it should be something like e:\ 
     rootfolder: kobo\ 
-    #only files with these extensions will be copied to kobo
     supportedformats: EPUB, EPUB3, FlePub, PDF, MOBI, JPEG, GIF, PNG, BMP, TIFF, TXT, HTML, RTF, CBZ, CBR, FB2
-#local PC settings
 local:
-    #location of foldes with your books
     shelfpath: books\
